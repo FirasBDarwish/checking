@@ -45,7 +45,6 @@ void stableMarriage(int prefer[2*N][N])
     memset(mFree, false, sizeof(mFree));
     int freeCount = N;
 
-    cout << "good" << endl;
     // While there are free men
     while (freeCount > 0)
     {
@@ -62,10 +61,10 @@ void stableMarriage(int prefer[2*N][N])
 
             if (wPartner[w-N] == -1)
                 {
-                    wPartner[w-N] == free_ind;
+                    wPartner[w-N] = free_ind;
                     mFree[free_ind] = true;
                     freeCount--;
-                    return;
+                    break;
                 }
             else
             {
@@ -74,7 +73,7 @@ void stableMarriage(int prefer[2*N][N])
                     mFree[wPartner[w-N]] = false;
                     wPartner[w-N] = free_ind;
                     mFree[free_ind] = true;
-                    return;
+                    break;
                 }
             }
             w_ind++;
