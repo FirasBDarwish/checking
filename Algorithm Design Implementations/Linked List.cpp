@@ -1,3 +1,7 @@
+/*
+Answer key: https://www.geeksforgeeks.org/program-to-implement-singly-linked-list-in-c-using-class/
+*/
+
 
 #include <cstddef> //for 'NULL' pointer value, instead of using 'nullptr'
 #include <iostream>
