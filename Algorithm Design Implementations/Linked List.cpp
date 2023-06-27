@@ -44,7 +44,8 @@ class LinkedList
         //insert at the end of the list
         void insert_node(int data);
 
-        //delete based on given position
+        //delete based on given position, indexing with head being position 1
+
         void delete_node(int position);
 
         //print entire list
@@ -61,7 +62,7 @@ void LinkedList::delete_node(int position)
     }
     else
     {
-        Node* assessor = head;
+        Node* assessor = head; //node used to evaluate length of linked list
         int length = 1;
         while(assessor->next != NULL)
         {
@@ -69,7 +70,7 @@ void LinkedList::delete_node(int position)
             assessor = assessor->next;
         }
         
-        Node* current = head;
+        Node* current = head; //keeping track of current node
         if(position>length || position < 1)
         {
             cout << "The requested position for deletion is not occupied by an element in the Linked List" << endl;
@@ -77,16 +78,9 @@ void LinkedList::delete_node(int position)
         }
         else if(position == 1)
         {
-            if(length > 1)
-            {
                 head = current->next;
                 current->next = NULL;
                 delete current;
-            }
-            else
-            {
-                head = NULL;
-            }
         }
         else
         {
