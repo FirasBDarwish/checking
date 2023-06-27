@@ -54,6 +54,20 @@ class LinkedList
 
         //print entire list
         void print_list();
+
+        //deallocating memory
+        ~LinkedList()
+        {
+            cout << "Deallocating.." << endl;
+            Node* current = head;
+            while(current != NULL)
+            {
+                Node* temp = current;
+                current = current->next;
+                delete temp;
+                cout << "Deleted.." << endl;
+            }
+        }
 };
 
 //indexing with head being position 1
@@ -167,4 +181,6 @@ int main()
     a.print_list();
 
     a.delete_node(1);
+
+    a.insert_node(10);
 }
