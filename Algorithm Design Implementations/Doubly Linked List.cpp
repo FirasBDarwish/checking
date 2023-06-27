@@ -50,6 +50,21 @@ class DoublyLinkedList
 
         void print();
         void print_backwards();
+        
+        ~DoublyLinkedList()
+        {
+            cout << "Deallocating.." << endl;
+            Node* current = head;
+
+            while(current != NULL)
+            {
+                Node* temp = current->next;
+                delete current;
+                current = temp;
+
+                cout << "Deleted.." << endl;
+            }
+        }
 
 };
 
