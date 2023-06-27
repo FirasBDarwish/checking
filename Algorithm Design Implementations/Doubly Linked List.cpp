@@ -1,3 +1,7 @@
+/*
+Guide that was used: https://www.softwaretestinghelp.com/doubly-linked-list-2/
+*/
+
 #include <cstddef> //for 'NULL' pointer value, instead of using 'nullptr'
 #include <iostream>
 using namespace std;
