@@ -1,4 +1,6 @@
 /*
+Section 2.5 of Algorithm Design (more explanations for heapify-up and heapify-down with psuedocode)
+
 Binary Heap using: https://www.geeksforgeeks.org/binary-heap/
 Priority queue using binary heap: https://www.geeksforgeeks.org/priority-queue-using-binary-heap/
 This second link is very similar to binary heap as binary heap as a structure works well with the motivation behind priority queues.

@@ -1,4 +1,6 @@
 /*
+Section 2.4 (Arrays and Lists) of Algorithm Design
+
 Guide that was used: https://www.softwaretestinghelp.com/doubly-linked-list-2/
 */
 

@@ -1,4 +1,6 @@
 /*
+Section 2.4 (Arrays and Lists) of Algorithm Design
+
 Answer key: https://www.geeksforgeeks.org/program-to-implement-singly-linked-list-in-c-using-class/
 */
 
