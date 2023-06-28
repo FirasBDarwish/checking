@@ -2,6 +2,7 @@
 
 From Section 2.5 of Algorithm Design.
 This is based on: https://www.geeksforgeeks.org/heap-sort/
+O(n*log(n))
 
 Note: Can pass vector by reference (&) instead of passing dynamically allocated array to function.
 */
