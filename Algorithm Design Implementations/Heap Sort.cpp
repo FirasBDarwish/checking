@@ -7,7 +7,7 @@ O(n*log(n))
 Note: Can pass vector by reference (&) instead of passing dynamically allocated array to function.
 */
 
-// C++ program for implementation of Heap Sort
+// C++ program for implementation of Heap Sort (ascending/descending order, depending on choice of heapify)
 
 #include <iostream>
 using namespace std;
@@ -37,6 +37,29 @@ void heapify(int *arr, int N, int i)
 
     return;
 }
+
+//USING THIS HEAPIFY, WHICH IS HEAPIFYDOWN WHEN KEY OF PARENT > KEY OF CHILD -> SWITCH WILL LEAD TO SORTING IN DESCENDING ORDER
+// void heapify(int *arr, int N, int i)
+// {
+//     int smallest = i;
+//     int left = 2*i+1;
+//     int right = 2*i+2;
+//     if(left < N && arr[smallest] > arr[left])
+//     {
+//         smallest = left;
+//     }
+//     if(right < N && arr[smallest] > arr[right])
+//     {
+//         smallest = right;
+//     }
+//     if(smallest != i)
+//     {
+//         swap(arr[i], arr[smallest]);
+//         heapify(arr, N, smallest);
+//     }
+
+//     return;
+// }
 
 void heapSort(int *arr, int N)
 {
