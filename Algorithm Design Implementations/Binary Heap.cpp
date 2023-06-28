@@ -16,6 +16,7 @@ How heapify_down plays a role in heapsort: https://www.geeksforgeeks.org/heap-so
 #include<climits>
 using namespace std;
 
+//swaps the values of x and y so that the index that contains x now contains y and vice versa
 void swap(int* x, int* y)
 {
     int temp = *x;
