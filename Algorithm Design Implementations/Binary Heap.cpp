@@ -4,6 +4,9 @@ Priority queue using binary heap: https://www.geeksforgeeks.org/priority-queue-u
 This second link is very similar to binary heap as binary heap as a structure works well with the motivation behind priority queues.
 
 Idea behind heapify_up and heapify_down here (both necessary in BINARY HEAP): https://pages.cs.wisc.edu/~mcw/cs367/lectures/heaps.html
+
+How heapify_down plays a role in heapsort: https://www.geeksforgeeks.org/heap-sort/
+
 */
 
 // A C++ program to demonstrate common Binary Heap Operations
