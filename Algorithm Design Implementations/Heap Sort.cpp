@@ -5,6 +5,10 @@ This is based on: https://www.geeksforgeeks.org/heap-sort/
 O(n*log(n))
 
 Note: Can pass vector by reference (&) instead of passing dynamically allocated array to function.
+
+This can, therefore, simply be implemented with a void heapify(vector<int>& heap, int size, int curr),
+See for this implementation: https://www.youtube.com/watch?v=kU4KBD4NFtw 
+
 */
 
 // C++ program for implementation of Heap Sort (ascending/descending order, depending on choice of heapify)
