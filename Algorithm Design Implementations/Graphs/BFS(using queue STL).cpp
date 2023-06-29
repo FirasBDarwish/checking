@@ -3,6 +3,8 @@
 This is based on section 3.3 from Algorithm Design.
 
 Primary source used here: https://www.geeksforgeeks.org/bfs-using-stl-competitive-coding/
+-> used auto adjacent to access each element in graph[u] for any node u (graph[u] is just a vector of adjacent nodes)
+-> changed input so that you can select which element you want to use as source/base for BFS
 
 O(V+E), where V is the number of nodes and E is the number of edges.
 
