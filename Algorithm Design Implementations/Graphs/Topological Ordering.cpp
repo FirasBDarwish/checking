@@ -64,6 +64,7 @@ void Graph::topologicalSortUtil(int v, vector<bool> &visited, stack<int> &stack)
         }
     }
 
+    //stack used in a unique way so that the element with no adjacent nodes is the first in (so last out).
     stack.push(v);
     
     return;
