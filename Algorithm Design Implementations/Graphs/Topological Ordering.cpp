@@ -4,6 +4,8 @@ From section 3.6 of Algorithm Design.
 
 Using: https://www.geeksforgeeks.org/cpp-program-for-topological-sorting/
 
+Note: topological ordering takes advantage of the idea of DFS, but its implementation
+and--especially--use of the stack is slightly different.
 
 */
 
