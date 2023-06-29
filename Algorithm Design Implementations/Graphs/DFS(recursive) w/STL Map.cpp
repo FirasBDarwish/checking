@@ -49,7 +49,7 @@ void Graph::DFS(int v)
     {
         if(visited[adjacent] != true)
         {
-            visited[adjacent] == true;
+            visited[adjacent] = true;
             DFS(adjacent);
         }
     }
@@ -73,7 +73,7 @@ int main()
     cout << "Following is Depth First Traversal"
             " (starting from vertex 2) \n";
  
-    // Function call
+    // Function call, based on one source node (and therefore only has the connected components in that island)
     g.DFS(2);
  
     return 0;
