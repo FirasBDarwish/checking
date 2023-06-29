@@ -7,6 +7,10 @@ As a back-up (but was NOT used): https://www.techiedelight.com/breadth-first-sea
 
 O(V+E), where V is the number of nodes and E is the number of edges.
 
+
+BFS.cpp uses vector<list<int>>, BFS(using queue STL) uses vector<vector<int>>; difference between list and vector is described
+here: https://stackoverflow.com/questions/2209224/vector-vs-list-in-stl
+
 */
 
 // C++ code to print BFS traversal from a given

@@ -69,7 +69,7 @@ int main()
     cin >> n >> e;
  
     v.assign(n, false);
-    g.assign(n, vector<int>());
+    g.assign(n, vector<int>(n)); //n is the size of thos vectors (keeping it blank will do nothing more than keep them variable)
  
     cout << "input the requsted number directed edges as 1 2 (followed by enter) to indicate directed edge from node 1 to node 2" << endl;
     int a, b;
@@ -84,6 +84,7 @@ int main()
     // }
  
     int u;
+    cout << "input the node you would like to set as the base: " << endl;
     cin >> u;
     BFS(u);
  
