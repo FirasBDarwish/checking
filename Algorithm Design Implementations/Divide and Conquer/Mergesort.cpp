@@ -86,6 +86,7 @@ void merge(int *arr, int const left, int const mid, int const right)
 
     int index_1 = 0, index_2 = 0;
     int index_merged = left;
+    //we split given array into two so that we can use the two to rewrite that first array in order.
 
     while(index_1 < subarray_1 && index_2 < subarray_2)
     {
