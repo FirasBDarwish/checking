@@ -9,6 +9,8 @@ Idea behind heapify_up and heapify_down here (both necessary in BINARY HEAP): ht
 
 How heapify_down plays a role in heapsort: https://www.geeksforgeeks.org/heap-sort/
 
+Pass by pointer vs pass by reference for swap function: https://www.geeksforgeeks.org/passing-by-pointer-vs-passing-by-reference-in-cpp/
+
 */
 
 // A C++ program to demonstrate common Binary Heap Operations
