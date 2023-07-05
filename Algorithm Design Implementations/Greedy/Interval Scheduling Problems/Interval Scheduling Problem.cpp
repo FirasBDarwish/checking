@@ -6,7 +6,7 @@ Brief follow up on qsort (used here): https://en.cppreference.com/w/cpp/algorith
 Documentations for qsort (as well as what compare function does): https://www.programiz.com/cpp-programming/library-function/cstdlib/qsort
 
 Reference code (but has alternative approach) for solving this problem in C++: https://github.com/kartikkukreja/blog-codes/blob/master/src/Interval%20Scheduling%20Problem.cpp
-
+    -> instead of qsort, uses operator overriding in inteval class--very clever
 
 */
 
