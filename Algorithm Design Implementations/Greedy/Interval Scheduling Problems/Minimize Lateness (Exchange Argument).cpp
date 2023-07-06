@@ -1,4 +1,13 @@
+/*
 
+This is from section 5.2 from Algorithm Design. Psuedocode available there.
+
+Resources used:
+    -> for general overview of problem and simple (high-level) pseudocode: https://kartikkukreja.wordpress.com/2013/11/24/scheduling-to-minimize-lateness/
+    -> for C++ implementation: https://github.com/kartikkukreja/blog-codes/blob/master/src/Scheduling%20to%20minimize%20lateness.cpp
+            -> used their approach for operator overloading, instead of my usual qsort approach.
+
+*/
 
 #include <iostream>
 #include <float.h>
