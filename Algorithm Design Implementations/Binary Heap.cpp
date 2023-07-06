@@ -151,6 +151,7 @@ void MinHeap::decreaseKey(int i, int new_val)
     }
     else
     {
+        //if new value is greater than old value
         harr[i] = new_val;
         MinHeapify(i); //heapify_down
     }
