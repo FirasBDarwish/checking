@@ -4,6 +4,8 @@ This is based on section 5.4 from Algorithm Design.
 
 Using: https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-using-priority_queue-stl/
 
+Another cool extensio from google's questions: https://www.youtube.com/watch?v=EaphyqKU4PQ
+
 */
 
 // Program to find Dijkstra's shortest path using
