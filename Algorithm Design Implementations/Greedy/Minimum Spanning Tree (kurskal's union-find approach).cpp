@@ -1,8 +1,12 @@
 /*
 
-This is from section 5.5 of Algorithm Design.
+This is from section 5.5 of Algorithm Design. See more information there on
+psuedocode as well as union-find data structure (and disjoint sets).
+
+Implemented using: https://www.geeksforgeeks.org/kruskals-minimum-spanning-tree-using-stl-in-c/
 
 More information on disjoint sets: https://people.cs.georgetown.edu/jthaler/ANLY550/lec6.pdf
+More information on union-find path compression: https://www.youtube.com/watch?v=VHRhJWacxis
 
 */
 
