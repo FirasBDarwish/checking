@@ -1,3 +1,11 @@
+/*
+
+This is based on section 5.4 from Algorithm Design.
+
+Using: https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-using-priority_queue-stl/
+
+*/
+
 // Program to find Dijkstra's shortest path using
 // priority_queue in STL
 #include <bits/stdc++.h>
@@ -19,6 +27,27 @@ void addEdge(vector<pair<int,int>> *adj, int u, int v, int weight)
 void shortest_path(vector<pair<int,int>> *adj, int V, int src)
 {
     priority_queue <iPair, vector<iPair>, greater<iPair> > min_heap;
+
+    /*
+    priority_queue: This is the C++ Standard Library container class template that implements a priority queue.
+    It is a type of container adapter that provides functionality for efficiently managing a collection of elements
+    with priorities.
+
+    <pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>>: This specifies the template arguments
+    for the priority queue. It consists of three parts:
+
+    pair<int, int>: This represents the type of elements that will be stored in the priority queue.
+    In this case, it's a pair of integers.
+
+    vector<pair<int, int>>: This specifies the underlying container type for the priority queue.
+    A vector is used as the container to store the elements.
+
+    greater<pair<int, int>>: This is a comparison function or functor used to determine the order
+    of elements in the priority queue. The greater function object is used here, which will result
+    in the elements being stored in ascending order based on the first element of the pair. If the
+    first elements are equal, the second elements will be compared. This means the smallest pair
+    will have the highest priority.
+    */
 
     vector<int> dist(V, INF);
 
