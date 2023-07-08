@@ -69,16 +69,20 @@ void Graph::primMST(int src)
         int u = min_heap.top().second;
         min_heap.pop();
 
+        //Different key values for same vertex may exist in the priority queue.
+          //The one with the least key value is always processed first.
+          //Therefore, ignore the rest.
         if(in_MST[u] == true)
             continue;
 
-        in_MST[u] = true;
+        in_MST[u] = true; //officially visited as it is the item in min_heap with smallest key (smallest weight)
 
         for(auto adjacent: adj[u])
         {
             int v = adjacent.first;
             int weight = adjacent.second;
 
+            //this is important because we already visited in_MST[v] no point in adding.
             if(in_MST[v] == false && weight < key[v])
             {
                 i++;
