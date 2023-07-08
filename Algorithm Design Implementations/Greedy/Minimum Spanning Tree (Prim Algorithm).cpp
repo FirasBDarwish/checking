@@ -50,12 +50,14 @@ void Graph::primMST(int src)
 {
     priority_queue< iPair, vector <iPair> , greater<iPair> > min_heap;
 
-    //equivalent to dist in our last example
+    //sort of like dist in our last example, but not distance from node, just the smallest weight connected to that node
+        //so key[v] is the smallest weight of an edge connected to key[v]
     vector<int> key(V,INF);
 
     //parent[v] = u says that node v was brought into the MST by being connected to node u
     vector<int> parent(V,-1);
 
+    //like the vector<bool> visited, which is commonly used in Djikstra to note visited nodes.
     vector<bool> in_MST(V,false);
 
     min_heap.push(make_pair(0,src));
