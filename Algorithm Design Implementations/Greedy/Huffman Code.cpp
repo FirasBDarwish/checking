@@ -2,6 +2,10 @@
 
 This is from section 5.8 of Algorithm Design.
 
+Using: https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/
+
+For some great context (fantastic video), see: https://www.youtube.com/watch?v=co4_ahEDCho
+
 Some more information on the bool operator(): https://en.cppreference.com/w/cpp/container/priority_queue
     -> and why it needs to be inverted, priority_queue is by default max_heap so you need to flip the comparison operator's logic
     as the 'final element' in the ordering is the first element to be taken out, so your comparison operator should make it such 
