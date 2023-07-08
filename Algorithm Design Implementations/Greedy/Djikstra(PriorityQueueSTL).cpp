@@ -5,6 +5,10 @@ This is based on section 5.4 from Algorithm Design.
 Using: https://www.geeksforgeeks.org/dijkstras-shortest-path-algorithm-using-priority_queue-stl/
 
 Another cool extensio from google's questions: https://www.youtube.com/watch?v=EaphyqKU4PQ
+    -> does not check whether distance to node is less than current (shortest) distance to node 
+        -> so has to add vector<bool> visited to check when a node has its shortest path considered 
+            -> and check whether visited[u] is true when popping u from min_heap (as there may be more than one pairs for u in the min_heap,
+            but the shortest one will naturally be popped first (due to min_heap, lowest key gets popped first, structure)).
 
 */
 

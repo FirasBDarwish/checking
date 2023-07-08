@@ -2,6 +2,8 @@
 
 This is based on section 5.5 of Algorithm Design.
 
+Using: https://www.geeksforgeeks.org/prims-algorithm-using-priority_queue-stl/
+
 We seek to use a priority queue here to improve the time complexity.
 
 */
