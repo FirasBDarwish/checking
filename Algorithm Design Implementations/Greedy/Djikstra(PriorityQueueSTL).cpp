@@ -66,6 +66,7 @@ void shortest_path(vector<pair<int,int>> *adj, int V, int src)
             int weight = adjacent.second;
 
             //this is the same as checking if v is in some vector visited
+            //adding if visited[v] == false does not hurt, setting visited[v] = true would have to happen after line 62
             if(dist[u]+weight < dist[v]) //adjacent.second gets weight
             {
                 dist[v] = dist[u]+weight;

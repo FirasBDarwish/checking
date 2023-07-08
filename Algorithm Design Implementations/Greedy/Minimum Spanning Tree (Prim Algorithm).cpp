@@ -61,6 +61,8 @@ void Graph::primMST(int src)
     min_heap.push(make_pair(0,src));
     key[src] = 0;
 
+    int i = 0;
+
     while(!min_heap.empty())
     {
 
@@ -79,6 +81,7 @@ void Graph::primMST(int src)
 
             if(in_MST[v] == false && weight < key[v])
             {
+                i++;
                 key[v] = weight;
                 min_heap.push(make_pair(weight, v));
                 parent[v] = u;
@@ -90,6 +93,8 @@ void Graph::primMST(int src)
     // Print edges of MST using parent array
     for (int i = 1; i < V; i++) //as source does not have a parent
         printf("%d - %d\n", parent[i], i);
+
+    cout << "i is " << i << endl;
 
 }
 
