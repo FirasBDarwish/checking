@@ -6,6 +6,8 @@ Using: https://www.geeksforgeeks.org/prims-algorithm-using-priority_queue-stl/
 
 We seek to use a priority queue here to improve the time complexity.
 
+greater<pair<int,int>> is actually a struct: https://stackoverflow.com/questions/71429544/what-does-greaterpairint-int-do-actually
+
 */
 
 // STL implementation of Prim's algorithm for MST
