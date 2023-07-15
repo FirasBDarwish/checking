@@ -9,6 +9,7 @@
 
  -> implemented printing mechanism to show final slots/jobs in optimal solution
 
+Note: this input includes memoization (using table array!, check)
 
 sort() can have a third parameter passed in that determines how sorting is done or
 you can operator overload < in the struct/class being used and not have to pass
