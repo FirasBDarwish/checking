@@ -37,7 +37,9 @@ bool myfunction(Job s1, Job s2)
 }
 
 //A binary search based function to find the latest job (before current job) that doesn't conflict with current job.
-//index is index of the current job.
+//index is index of the current job, which is also immediately our high as no job afterward is before current job in our search
+
+//binary search can be implemented recursively, this is implemented iteratively here. See geeksforgeeks for recursive implementation
 int binarySearch(Job *jobs, int index)
 {
     int lo = 0, hi = index - 1;
