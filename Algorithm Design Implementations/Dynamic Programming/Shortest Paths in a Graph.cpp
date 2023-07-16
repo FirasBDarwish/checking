@@ -3,6 +3,11 @@
 
 This is an implementation from section 6.8 from Algorithm Design. 
 
+Using: my mind!
+
+// for a similar problem, see: https://www.geeksforgeeks.org/min-cost-path-dp-6/
+    -> this runs a similar logic but on a 2D array, instead of a graph
+
 */
 
 #define INFINITY_byFiras 100000
