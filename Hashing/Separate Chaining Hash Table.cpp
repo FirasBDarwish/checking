@@ -54,6 +54,24 @@ class hash<string> //so what is this
 };
 
 template <typename HashedObj>
+HashTable<HashedObj>::HashTable(int size = 101)
+{
+    theLists(nextPrime(size));
+    /*
+    The std::vector constructor is used
+    to initialize the array member. It
+    creates a std::vector with a size
+    equal to the next prime number
+    (determined by nextPrime(size)).
+    The elements of the vector are
+    default-constructed, meaning they
+    are initialized to their default values
+    based on their type.
+    */
+    makeEmpty();
+}
+
+template <typename HashedObj>
 size_t HashTable<HashedObj>::myhash(const HashedObj & x) const
 {
     static hash<HashedObj> hf; //uses default hash function for string,
@@ -108,7 +126,7 @@ bool HashTable<HashedObj>::remove(const HashedObj & x) //x is its key
 }
 
 template <typename HashedObj>
-bool HashTable<HashedObj>insert(const HashedObj & x)
+bool HashTable<HashedObj>::insert(const HashedObj & x)
 {
     auto *whichList = theLists[myhash(x)];
 
