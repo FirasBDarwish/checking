@@ -1,6 +1,10 @@
 /*
 
-Unordered set of case-insensitive strings can be maintained.
+This uses the unordered_set data structure from C++ STL
+
+See 5.6 of 'Data Structures and Algorithm Design in C++' for
+more info on custom hash function/equality oeprator
+in this unordered_set datatype.
 
 */
 
@@ -52,6 +56,7 @@ cout << endl << "All elements : " << endl;
 /*
 
 ADding custom hash function as well as custom comparison operator:
+    more info here: https://stackoverflow.com/questions/38554083/how-can-i-use-a-c-unordered-set-for-a-custom-class
 
 What is this code doing in C++?
 
