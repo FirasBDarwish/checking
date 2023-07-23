@@ -1,5 +1,14 @@
 /*
 
+This is a largely erroneous implementation of quadratic probing from the "Data Structures and Algorithm Design in C++" book.
+
+It is also missing the rehash function.
+
+*/
+
+
+/*
+
 In the provided HashEntry struct, there are two constructors:
 
 Constructor taking const HashedObj& e:
