@@ -2,8 +2,6 @@
 
 This is a largely erroneous implementation of quadratic probing from the "Data Structures and Algorithm Design in C++" book.
 
-It is also missing the rehash function.
-
 */
 
 
@@ -123,12 +121,12 @@ function...
 
 */
 template<typename HashedObj>
-int HashTable<HashedObj>::findPos(const HashedObj & x) const //assumes the element X is in the array
+int HashTable<HashedObj>::findPos(const HashedObj & x) const
 {
     int offset = 1;
     int currentPos = myhash(x);
 
-while(array[currentPos].info != EMPTY && array[currentPos].element != x) //empty means it contains an element.. active means it CAN hold an element
+while(array[currentPos].info != EMPTY && array[currentPos].element != x)
 {
     currentPos += offset;
     offset += 2; //linear probing..? no it says quadratic in book
@@ -180,4 +178,26 @@ bool HashTable<HashedObj>::remove(const HashedObj & x)
 
     array[currentPos].info = DELETED;
     return true;
+}
+
+template<typename HashedObj>
+void HashTable<HashedObj>::rehash()
+{
+    vector<HashEntry> oldArray = array;
+
+        //create new double-sized, empty table
+    array.resize(nextPrime(2*oldArray.size()));
+    for(auto & entry: array)
+        array.info = EMPTY; //setting it to empty 
+
+    currentSize = 0;
+    for(auto & entry: oldArray)
+    {
+        if(entry.info == ACTIVE) //active means occupied by element
+        {
+            insert(std::move(entry.element));
+        }
+    }
+
+
 }

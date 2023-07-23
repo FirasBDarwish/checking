@@ -3,7 +3,6 @@
 This is based on section 5.3 of Data Structures and Algorithm Analysis in C++.
 
 We will use rehash() to ensure the hash table's load factor remains around 1.0. 
-    -> currently, it is missing the rehash function.
 
 */
 
@@ -148,6 +147,43 @@ bool HashTable<HashedObj>::insert(const HashedObj & x)
 
     return true;
 
+}
+
+template <typename HashedObj>
+void HashTable<HashedObj>::rehash()
+{
+    vector<list<HashedObj>> oldLists = theLists;
+
+        //create new double-sized, empty table
+    theLists.resize(nextPrime(2*theLists.size()));
+    for(auto & thisList: theLists)
+    {
+        thisList.clear();
+    }
+
+    currentSize = 0;
+    for( auto & thisList: oldLists)
+    {
+        for(auto & x: thisList)
+        {
+            insert(std::move(x)); //uses the insert function we developed for rvalue
+            /*
+            
+            Yes, you can remove the use of std::move and pass the elements by lvalue reference in the rehash function. In fact, passing elements by lvalue reference would avoid the need to move elements and would perform the copy operation instead. However, this could lead to additional overhead, especially if HashedObj is expensive to copy.
+
+            When you pass elements by lvalue reference, the insert function will need to create a copy of each element being inserted. This involves invoking the copy constructor of HashedObj, which can be costly if the copy constructor performs deep copying or allocates significant resources.
+
+            On the other hand, using std::move enables the use of move semantics, which allows the elements to be moved and avoids unnecessary copying. If HashedObj has an efficient move constructor, the move operation can be significantly faster than copying, as it transfers the resources (e.g., dynamically allocated memory) from the source object to the destination object without duplication.
+
+            Whether to use std::move or not depends on the characteristics of HashedObj and its associated move constructor. If HashedObj is a simple lightweight type or if its move constructor is not significantly more efficient than its copy constructor, passing by lvalue reference might be reasonable.
+
+            However, if HashedObj is a complex type or its move constructor offers substantial performance gains over copying, using std::move can lead to better performance during rehashing. This is particularly relevant when dealing with large hash tables or when HashedObj contains costly-to-copy resources.
+
+            In summary, you can remove the use of std::move and pass elements by lvalue reference in the rehash function, but be aware that it may result in additional copying overhead. To make an informed decision, consider the characteristics of HashedObj and the potential performance trade-offs between copying and moving elements.
+
+            */
+        }
+    }
 }
 
 //rehash implementation left
