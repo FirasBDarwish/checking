@@ -4,6 +4,8 @@ use: https://www.programiz.com/dsa/priority-queue#:~:text=Priority%20queue%20can
 
 Priority queue using binary heap: https://www.geeksforgeeks.org/priority-queue-using-binary-heap/
 This second link is very similar to binary heap as binary heap as a structure works well with the motivation behind priority queues.
+
+*important: minheap using priority_queue stl: https://www.geeksforgeeks.org/implement-min-heap-using-stl/
 */
 
 
