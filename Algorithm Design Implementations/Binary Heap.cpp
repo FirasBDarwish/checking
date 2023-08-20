@@ -10,6 +10,7 @@ Idea behind heapify_up and heapify_down here (both necessary in BINARY HEAP): ht
 How heapify_down plays a role in heapsort: https://www.geeksforgeeks.org/heap-sort/
 
 Pass by pointer vs pass by reference for swap function: https://www.geeksforgeeks.org/passing-by-pointer-vs-passing-by-reference-in-cpp/
+    -> keep in mind array can be passed using [] or * (pointer) as well.
 
 */
 
